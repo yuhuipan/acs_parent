@@ -27,7 +27,7 @@ public class ArticleController {
     /**
      * 文章点赞
      *
-     * @return
+     * @return Result
      */
     @RequestMapping(value = "/thumbup/{articleId}", method = RequestMethod.PUT)
     public Result thumbup(@PathVariable(value = "articleId") String articleId) {
