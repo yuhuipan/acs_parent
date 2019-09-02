@@ -1,0 +1,25 @@
+server:
+  port: 9004
+spring:
+  application:
+    name: acs-article #文章微服务
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/acs_article?characterEncoding=UTF-8
+    username: root
+    password: 123
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+  data:
+    mongodb:
+      host: 127.0.0.1
+      database: recruitdb
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka
+  instance:
+    prefer-ip-address: true

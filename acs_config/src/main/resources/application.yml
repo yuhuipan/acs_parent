@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: acs-config #配置中心微服务
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/yuhuipan/acs-config.git
+server:
+  port: 12000

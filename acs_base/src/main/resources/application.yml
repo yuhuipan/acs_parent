@@ -1,0 +1,30 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: acs-base #指定服务名
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/acs_base?characterEncoding=utf-8
+    username: root
+    password: 123
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka
+  instance:
+    prefer-ip-address: true
+#  datasource:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:orcle:thin:@127.0.0.1:1521:orcl  #jdbc:oracle:thin:@localhost:1521:ORCL
+#    username: acs
+#    password: acs
+#  jpa:
+#    database: oracle
+#    show-sql: true
+#    generate-ddl: true

@@ -1,0 +1,41 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: acs-manager #管理后台微服务网关
+eureka:
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+jwt:
+  config:
+    key: yuhuipan
+
+zuul:
+  routes:
+    acs-gathering: #活动
+      path: /gathering/** #配置请求URL的请求规则
+      serviceId: acs-gathering #指定Eureka注册中心中的服务id
+    acs-article: #文章
+      path: /article/** #配置请求URL的请求规则
+      serviceId: acs-article #指定Eureka注册中心中的服务id
+    acs-base: #基础
+      path: /base/** #配置请求URL的请求规则
+      serviceId: acs-base #指定Eureka注册中心中的服务id
+    acs-friend: #交友
+      path: /friend/** #配置请求URL的请求规则
+      serviceId: acs-friend #指定Eureka注册中心中的服务id
+    acs-qa: #问答
+      path: /qa/** #配置请求URL的请求规则
+      serviceId: acs-qa #指定Eureka注册中心中的服务id
+    acs-recruit: #招聘
+      path: /recruit/** #配置请求URL的请求规则
+      serviceId: acs-recruit #指定Eureka注册中心中的服务id
+    acs-spit: #吐槽
+      path: /spit/** #配置请求URL的请求规则
+      serviceId: acs-spit #指定Eureka注册中心中的服务id
+    acs-user: #用户
+      path: /user/** #配置请求URL的请求规则
+      serviceId: acs-user #指定Eureka注册中心中的服务id
